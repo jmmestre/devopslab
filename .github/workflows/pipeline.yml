@@ -23,7 +23,7 @@ jobs:
         run: pip install flask flask-wtf pylint pytest pytest-cov selenium playwright
               
       - name: Running pytest
-        run: pytest --cov=./ --cov-report=xml --doctest-modules
+        run: pytest --cov=test --cov-report=xml --doctest-modules
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
