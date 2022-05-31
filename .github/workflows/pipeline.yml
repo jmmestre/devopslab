@@ -20,13 +20,10 @@ jobs:
           python-version: '3.7.11'
 
       - name: Install Requirements
-        run:  pip install flask flask-wtf pylint pytest pytest-cov selenium playwright
+        run: pip install flask flask-wtf pylint pytest pytest-cov selenium playwright
               
       - name: Running pytest
-        run: pytest -v --cov --cov-report=xml --cov-report=html
-
-      - name: Analysing the code with pylint
-        run: pylint .
+        run: pytest --cov=./ --cov-report=xml --doctest-modules
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
