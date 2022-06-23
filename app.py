@@ -8,7 +8,7 @@ csrf = CSRFProtect(app)
 
 @app.route("/")
 def pagina_inicial():
-    return "Hello JMestre V11"
+    return "Hello JMestre V12"
 
 if __name__ == '__main__':
     port = os.getenv('PORT')
